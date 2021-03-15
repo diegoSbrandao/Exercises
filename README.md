@@ -1,2 +1,2 @@
-# Exerc-cios
+# Exercícios
 Exercício_Lógica_Programação
