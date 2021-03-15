@@ -1,0 +1,623 @@
+Exercícios em VisuAlg. (Estrutura Condicional).
+
+01-) Algoritmo "Notas"
+
+//Fazer um programa para ler as duas notas que um aluno obteve no primeiro e
+//segundo semestres de uma disciplina anual. Em seguida, mostrar
+//a nota final que o aluno obteve (com uma casa decimal) no
+//ano juntamente com um texto explicativo. Caso a nota final do aluno
+//seja inferior a 60.00, mostrar a mensagem "REPROVADO", conforme exemplos.
+
+Var
+
+nota1,nota2,notaFinal : real
+
+Inicio
+
+      escreva("Digite sua primeira nota: ")
+      leia(nota1)
+      escreva("Digite sua segunda nota: ")
+      leia(nota2)
+      
+      notaFinal <- nota1+nota2
+      
+      limpatela()
+      
+      se notaFinal > 60 entao
+         escreva("Nota Final =",notaFinal:5:1)
+      senao
+          escreval("Nota Final =",notaFinal:5:1)
+          escreval("REPROVADO")
+      fimse
+
+
+
+Fimalgoritmo
+    
+____________________________________
+
+02-) Algoritmo "Bhaskara"
+
+//Fazer um programa para ler os três coeficientes de uma equação
+//do segundo grau. Usando a fórmula de Baskara, calcular e mostrar
+//os valores das raízes x1 e x2 da equação com quatro casas decimais,
+//conforme exemplo. Se a equação não possuir raízes reais,
+//mostrar uma mensagem.
+
+Var
+
+//Observação: a diferente de 0 e dela não pode ser negativo.
+       a,b,c,delta,x1,x2,divisao : real
+
+Inicio
+
+      escreva("Digite o coeficiente a: ")
+      leia(a)
+      escreva("Digite o coeficiente b: ")
+      leia(b)
+      escreva("Digite o coeficiente c: ")
+      leia(c)
+      
+      delta <- Exp(b,2) - 4 * a * c
+      divisao <- 2 * a
+      
+      limpatela()
+
+      se (delta >= 0) e (a <> 0)  entao
+      
+         x1 <- (-b + RaizQ(delta)) / divisao
+         x2 <- (-b - RaizQ(delta)) / divisao
+         
+         escreval("X1 = ",x1:5:4)
+         escreval("X2 = ",x2:5:4)
+         
+      senao
+          escreval("Esta equação não possui raízes reais.")
+
+      fimse
+
+Fimalgoritmo
+    
+____________________________________
+
+03-) Algoritmo "Menor de 3"
+
+//Fazer um programa para ler três números inteiros.
+//Em seguida, mostrar qual o menor dentre os três
+//números lidos. Em caso de empate, mostrar apenas uma vez.
+
+Var
+
+num1,num2,num3 : inteiro
+
+Inicio
+
+      escreva("Digite o primeiro número: ")
+      leia(num1)
+      escreva("Digite o segundo número: ")
+      leia(num2)
+      escreva("Digite o terceiro número: ")
+      leia(num3)
+      
+      limpatela()
+
+      se (num1 < num2) e (num1 < num3) entao
+           escreval("O menor número dos três foi o número: ",num1)
+         
+      senao
+          se num2 < num3 entao
+           escreval("O menor número dos três foi o número: ",num2)
+
+             senao
+               escreval("O menor número dos três foi o número: ",num3)
+               
+                fimse
+          fimse
+
+Fimalgoritmo
+
+    
+____________________________________
+
+04-) Algoritmo "Operadora"
+
+//Uma operadora de telefonia cobra R$ 50.00 por um plano básico
+//que dá direito a 100 minutos de telefone. Cada minuto que exceder
+//a franquia de 100 minutos custa R$ 2.00. Fazer um programa para
+//ler a quantidade de minutos que uma pessoa consumiu,
+//daí mostrar o valor a ser pago.
+
+Var
+
+minutos,planoBasico,ex : inteiro
+
+Inicio
+
+      escreva("Digite a quantidade de minutos: ")
+      leia(minutos)
+      
+      planoBasico <- 50
+      ex <- (minutos - 100) * 2 + planoBasico
+
+      limpatela()
+
+      se minutos <= 100 entao
+           escreva("Valor a pagar: R$ ",planoBasico:1:2)
+
+      senao
+         se minutos > 100 entao
+       escreva("Valor a pagar: R$ ", ex:1:2)
+       
+         fimse
+         
+      fimse
+      
+Fimalgoritmo
+
+____________________________________
+
+05-) Algoritmo "Troco_Verificado"
+
+//Fazer um programa para calcular o troco no processo de pagamento
+//de um produto de uma mercearia. O programa deve ler o preço unitário
+//do produto, a quantidade de unidades compradas deste produto,
+//e o valor em dinheiro dado pelo cliente. Seu programa
+//deve mostrar o valor do troco a ser devolvido ao cliente.
+//Se o dinheiro dado pelo cliente não for suficiente,
+//mostrar uma mensagem informando o valor restante conforme exemplo.
+
+Var
+
+precoUnit, dinheiroReceb, troco, contaAPagar : inteiro
+quantidadeComp : inteiro
+
+Inicio
+
+      escreva("Digite o preço unitário do produto: R$ ")
+      leia(precoUnit)
+      
+      escreva("Digite a quantidade comprada: ")
+      leia(quantidadeComp)
+      
+      escreva("Digite o dinheiro recebido: R$ ")
+      leia(dinheiroReceb)
+      
+      contaAPagar <- precoUnit * quantidadeComp
+      troco <- dinheiroReceb - contaApagar
+
+      limpatela()
+
+      se troco >= 0 entao
+           escreva("TROCO = R$ ",troco:1:2)
+
+      senao
+
+       escreva("DINHEIRO INSUFICIENTE. FALTAM " ,Abs(troco):1:2, " REAIS")
+
+      fimse
+      
+Fimalgoritmo
+  
+____________________________________
+
+06-) Algoritmo "Glicose"
+
+// fazer um programa para ler a quantidade de glicose
+//no sangue de uma pessoa e depois mostrar na tela a
+//classificação desta glicose de acordo com a tabela de
+//referência ao lado.
+
+//Classificação Glicose
+//Normal Até 100 mg/dl
+//Elevado
+//Maior que 100 até
+//140 mg/dl
+//Diabetes Maior de 140 mg/dl
+
+Var
+
+glicose : inteiro
+
+Inicio
+
+      escreva("Digite a medida da glicose:")
+      leia(glicose)
+
+      limpatela()
+
+      se glicose <= 100 entao
+           escreva("Normal")
+      senao
+         se glicose <=140 entao
+           escreva("Elevado")
+         senao
+            escreva("Diabetes")
+         fimse
+      fimse
+      
+Fimalgoritmo
+
+
+    
+____________________________________
+
+07-) Algoritmo "Dardo"
+
+//No arremesso de dardo, o atleta tem três chances para
+//lançar o dardo à maior distância que conseguir.
+//Você deve criar um programa para, dadas as medidas
+//das três tentativas de lançamento, informar qual foi a maior.
+
+Var
+
+dist1, dist2, dist3 : real
+
+Inicio
+
+      escreval("Digite as três distâncias: ")
+      leia(dist1)
+      leia(dist2)
+      leia(dist3)
+
+      limpatela()
+
+      se (dist1 > dist2) e (dist1 > dist3) entao
+           escreva("MAIOR DISTÂNCIA = ",dist1:4:2)
+      senao
+         se dist2 > dist3 entao
+           escreva("MAIOR DISTÂNCIA = ",dist2:4:2)
+         senao
+            escreva("MAIOR DISTÂNCIA = ",dist3:4:2)
+         fimse
+      fimse
+      
+Fimalgoritmo
+    
+____________________________________
+
+08-) Algoritmo "Temperatura"
+
+//Deseja-se converter uma medida de temperatura da
+//escala Celsius para Fahrenheit ou vice-versa. Para isso, você deve
+//construir um programa que leia a letra "C" ou "F" indicando
+//em qual escala vai ser informada uma temperatura. Em seguida o
+//programa deve mostrar a temperatura na outra escala com duas casas
+//decimais. A seguir é dada a fórmula para converter de Fahrenheit
+//para Celsius (você deve deduzir a fórmula de Celsius para Fahrenheit): ( 32)
+
+Var
+
+fahrenheit, celsius, formula1, formula2, f, c : real
+ resposta : caractere
+
+
+Inicio
+
+      escreva("Você vai digitar a temperatura em qual escala (C/F)? ")
+      leia(resposta)
+      
+         se (resposta = "c") ou (resposta = "C") entao
+           escreva("Digite a temperatura em Celsius: ")
+           leia(c)
+           formula1 <- c * 1.8 + 32
+             limpatela()
+            escreval("Temperatura equivalente em Fahrenheit: ", formula1:4:2)
+           
+         senao
+            se (resposta = "f") ou (resposta = "F") entao
+            escreva("Digite a temperatura em Fahrenheit: ")
+            leia(f)
+            formula2 <- (f - 32) / 1.8
+            limpatela()
+            escreval("Temperatura equivalente em Celsius: ", formula2:4:2)
+            
+          senao
+               escreval("Você deve digitar a temperatura em (C/F)")
+               
+            fimse
+          fimse
+
+
+      
+Fimalgoritmo
+    
+____________________________________
+
+09-) Algoritmo "Temperatura"
+
+//Uma lanchonete possui vários produtos. Cada produto possui um código
+//e um preço. Você deve fazer um programa para ler o código e a
+//quantidade comprada de um produto (suponha um código válido), e daí
+//informar qual o valor a ser pago, com duas casas decimais, conforme
+//tabela de produtos ao lado.
+
+//Código do produto Preço do produto
+//1 R$ 5.00
+//2 R$ 3.50
+//3 R$ 4.80
+//4 R$ 8.90
+//5 R$ 7.32
+
+Var
+
+codigo, preco, totalValor: real
+quantidade : inteiro
+ resposta : caractere
+
+
+Inicio
+
+      escreva("Codigo do produto comprado: ")
+      leia(codigo)
+      
+      escreva("Quantidade comprada: ")
+      leia(quantidade)
+      
+      
+         se codigo = 1 entao
+           preco <- 5.00
+           totalValor <- preco * quantidade
+            limpatela()
+            escreval("Valor a pagar: R$ ", totalValor:4:2)
+            
+         senao
+            se codigo = 2 entao
+           preco <- 3.50
+           totalValor <- preco * quantidade
+            limpatela()
+            escreval("Valor a pagar: R$ ", totalValor:4:2)
+
+
+         senao
+            se codigo = 3 entao
+           preco <- 4.80
+           totalValor <- preco * quantidade
+            limpatela()
+            escreval("Valor a pagar: R$ ", totalValor:4:2)
+
+             
+         senao
+            se codigo = 4 entao
+           preco <- 8.90
+           totalValor <- preco * quantidade
+            limpatela()
+            escreval("Valor a pagar: R$ ", totalValor:4:2)
+
+             
+         senao
+            se codigo = 5 entao
+           preco <- 7.32
+           totalValor <- preco * quantidade
+            limpatela()
+            escreval("Valor a pagar: R$ ", totalValor:4:2)
+
+           senao
+               escreval("Código inválido")
+               
+                 fimse
+               fimse
+              fimse
+            fimse
+          fimse
+
+
+      
+Fimalgoritmo
+    
+____________________________________
+
+10-) Algoritmo "Múltiplos"
+
+//Fazer um programa para ler dois números inteiros, e dizer se um número é múltiplo do outro. Os
+//números podem ser digitados em qualquer ordem.
+
+
+
+Var
+
+num1, num2 : inteiro
+
+Inicio
+
+      escreval("Digite dois numeros inteiros: ")
+      leia(num1)
+      leia(num2)
+
+         se (num1 % num2 = 0) ou (num2 % num1 = 0) entao
+            limpatela()
+            escreval("São Múltiplos")
+            
+         senao
+            limpatela()
+            escreval("Não são Múltiplos")
+
+         fimse
+      
+Fimalgoritmo
+
+____________________________________
+
+11-) Algoritmo "Aumento"
+
+//Uma empresa vai conceder um aumento percentual de salário aos seus
+//funcionários dependendo de quanto cada pessoa ganha, conforme tabela
+//ao lado. Fazer um programa para ler o salário de uma pessoa,
+//daí mostrar qual o novo salário desta pessoa depois do aumento,
+//quanto foi o aumento e qual foi a porcentagem de aumento.
+
+//Salário atual Aumento
+//Até R$ 1000.00 20%
+//Acima de R$ 1000.00
+//até R$ 3000.00
+//15%
+//Acima de R$ 3000.00
+//até R$ 8000.00
+//10%
+//Acima de R$ 8000.00 5%
+
+Var
+
+salarioAtual, novoSalario, aumento, porcentagem : real
+
+Inicio
+
+      escreva("Digite o seu salário: ")
+      leia(salarioAtual)
+
+         se salarioAtual <= 1000 entao
+            limpatela()
+            porcentagem <- 0.20
+            novoSalario <- salarioAtual + salarioAtual * porcentagem
+            aumento <-  novoSalario - salarioAtual
+            
+            escreval("Novo salário = R$ ", novoSalario:4:2)
+            escreval("Aumento = R$ ", aumento:4:2)
+            escreval("Porcentagem = ",porcentagem *100, " %")
+            
+          senao
+             se salarioAtual <= 3000 entao
+             limpatela()
+             porcentagem <- 0.15
+             novoSalario <- salarioAtual + salarioAtual * porcentagem
+             aumento <-  novoSalario - salarioAtual
+
+             escreval("Novo salário = R$ ", novoSalario:4:2)
+             escreval("Aumento = R$ ", aumento:4:2)
+             escreval("Porcentagem = ",porcentagem *100, " %")
+
+           senao
+             se salarioAtual <= 8000 entao
+             limpatela()
+             porcentagem <- 0.10
+             novoSalario <- salarioAtual + salarioAtual * porcentagem
+             aumento <-  novoSalario - salarioAtual
+
+             escreval("Novo salário = R$ ", novoSalario:4:2)
+             escreval("Aumento = R$ ", aumento:4:2)
+             escreval("Porcentagem = ",porcentagem *100, " %")
+
+            senao
+             limpatela()
+             porcentagem <- 0.05
+             novoSalario <- salarioAtual + salarioAtual * porcentagem
+             aumento <-  novoSalario - salarioAtual
+
+             escreval("Novo salário = R$ ", novoSalario:4:2)
+             escreval("Aumento = R$ ", aumento:4:2)
+             escreval("Porcentagem = ",porcentagem *100, " %")
+             
+             
+           fimse
+          fimse
+         fimse
+      
+Fimalgoritmo
+
+____________________________________
+
+12-) Algoritmo "Tempo de Jogo"
+
+//Leia a hora inicial e a hora final de um jogo. A seguir
+//calcule a duração do jogo, sabendo que o mesmo pode começar em um
+//dia e terminar em outro, tendo uma duração mínima de 1 hora e
+//máxima de 24 horas.
+
+Var
+
+horaInicial, horaFinal, duracao, dia1, dia2 : real
+
+Inicio
+
+      escreva("Digite a hora inicial: ")
+      leia(horaInicial)
+      
+      escreva("Digite a hora final: ")
+      leia(horaFinal)
+
+         se horaInicial < horaFinal entao
+            limpatela()
+
+            duracao <- horaFinal - horaInicial
+
+             escreval("O JOGO DUROU",duracao, " HORA(S).")
+            
+          senao
+              limpatela()
+              duracao <- 24 - horaInicial  +  horaFinal
+
+              escreval("O JOGO DUROU",duracao," HORA(S).")
+
+         fimse
+      
+Fimalgoritmo
+
+____________________________________
+
+13-) Algoritmo "Coordenadas"
+
+//Leia os valores das coordenadas X e Y de um ponto no plano
+//cartesiano. A seguir, determine qual o quadrante ao qual pertence o
+//ponto (Q1, Q2, Q3 ou Q4). Se o ponto estiver na origem, escreva a
+//mensagem “Origem”. Se o ponto estiver sobre um dos eixos escreva
+//“Eixo X” ou “Eixo Y”, conforme for a situação..
+
+Var
+
+valorX, valorY : real
+
+Inicio
+
+      escreva("Digite o valor de X: ")
+      leia(valorX)
+      
+      escreva("Digite o valor de Y: ")
+      leia(valorY)
+            
+         se (valorX > 0 ) e (valorY > 0) entao
+            limpatela()
+            escreval("Q1")
+            
+         senao
+            se(valorX < 0 ) e (valorY > 0) entao
+             limpatela()
+            escreval("Q2")
+            
+           senao
+            se(valorX < 0 ) e (valorY < 0) entao
+             limpatela()
+            escreval("Q3")
+            
+           senao
+            se(valorX > 0 ) e (valorY < 0) entao
+             limpatela()
+            escreval("Q4")
+            
+           senao
+            se(valorX = 0 ) e (valorY = 0) entao
+             limpatela()
+            escreval("Origem")
+            
+            senao
+               se(valorX >= 0 ) e (valorY = 0) entao
+               limpatela()
+               escreval("Eixo X")
+               
+            senao
+               se(valorX = 0 ) e (valorY >= 0) entao
+               limpatela()
+               escreval("Eixo Y")
+
+               fimse
+              fimse
+             fimse
+            fimse
+           fimse
+          fimse
+         fimse
+      
+Fimalgoritmo
+
+
+    
+                        
+            

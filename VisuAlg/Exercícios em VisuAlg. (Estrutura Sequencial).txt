@@ -1,0 +1,343 @@
+Exercícios em VisuAlg. (Estrutura Sequencial).
+
+01-) Algoritmo " Problema "terreno""
+
+//Fazer um programa para ler as medidas da largura e comprimento de um terreno
+//retangular com uma casa decimal, bem como o valor do metro quadrado do terreno
+//com duas casas decimais. Em seguida, o programa deve mostrar o valor da área
+//do terreno, bem como o valor do preço do terreno,
+//ambos com duas casas decimais, conforme exemplo.
+
+Var
+
+larg, comp, met2, areaT, precoT : real
+
+Inicio
+
+   escreval("Digite a largura do terreno:")
+   leia(larg)
+   escreval("Digite o comprimento do terreno:")
+   leia(comp)
+   escreval("Digite o valor do metro quadrado:")
+   leia(met2)
+   
+   limpatela()
+   areaT <- larg * comp
+   precoT <- areaT * met2
+   
+   escreval("A área do terreno = ", areaT:8:2)
+   escreval("Preço do terreno = ", precoT:8:2)
+
+    Fimalgoritmo
+    
+____________________________________
+
+02-) Algoritmo " Problema "retangulo""
+
+//Fazer um programa para ler as medidas da base e altura de um retângulo.
+//Em seguida, mostrar o valor da área, perímetro e diagonal deste retângulo,
+//com quatro casas decimais, conforme exemplos.
+
+
+Var
+
+bas, alt, area, peri, diag : real
+
+
+
+Inicio
+
+   escreval("Digite a base do retângulo:")
+   leia(bas)
+   escreval("Digite a altura do retângulo:")
+   leia(alt)
+
+   limpatela()
+   
+   area <- bas * alt
+   peri <- 2 *(bas + alt)
+   diag <- RaizQ(Exp(bas, 2) + Exp(alt,2))
+   
+   escreval("A área do retângulo = ", area:5:4)
+   escreval("O perímetro do retângulo = ", peri:5:4)
+   escreval("A diagonal do retângulo = ", diag:5:4)
+
+
+   
+   
+    Fimalgoritmo
+    
+____________________________________
+
+03-) Algoritmo " Problema "idades""
+
+//Fazer um programa para ler o nome e idade de duas pessoas.
+//Ao final mostrar uma mensagem com os nomes e a idade média
+//entre essas pessoas, com uma casa decimal, conforme exemplo.
+
+Var
+
+idade1,idade2: inteiro
+nome1,nome2 : caractere
+media : real
+
+
+
+Inicio
+
+   escreval("Dados da primeira pessoa:")
+   escreva("Digite seu nome: ")
+   leia(nome1)
+   escreva("Digite a sua idade: ")
+   leia(idade1)
+   
+   escreval
+   
+   escreval("Dados da segunda pessoa:")
+   escreva("Digite seu nome: ")
+   leia(nome2)
+   escreva("Digite a sua idade: ")
+   leia(idade2)
+
+
+   limpatela()
+   
+   media <- (idade1 + idade2) / 2
+   
+   escreval("A idade média de ",nome1," e ",nome2, " é de", media, " anos")
+
+
+
+   
+   
+    Fimalgoritmo
+    
+____________________________________
+
+04-) Algoritmo " Problema "soma""
+
+//Fazer um programa para ler dois valores inteiros X e Y,
+//e depois mostrar na tela o valor da soma destes números.
+
+Var
+
+x,y,soma: inteiro
+
+
+Inicio
+
+   escreva("Digite o valor de X:")
+   leia(x)
+   escreva("Digite o valor de Y:")
+   leia(y)
+
+   limpatela()
+   
+   soma <- x+y
+   
+   escreval("A soma =",soma)
+
+
+
+   
+   
+    Fimalgoritmo
+
+____________________________________
+
+05-) Algoritmo " Problema "troco""
+
+//Fazer um programa para calcular o troco no processo de pagamento de
+//um produto de uma mercearia. O programa deve ler o preço unitário do produto
+//a quantidade de unidades compradas deste produto, e o valor em dinheiro dado
+// pelo cliente (suponha que haja dinheiro suficiente). Seu programa deve
+//mostrar o valor do troco a ser devolvido ao cliente.
+Var
+
+preco, quanti, dinheiroRec, troco: real
+
+
+Inicio
+
+   escreva("Digite o preço unitário do produto:")
+   leia(preco)
+   escreva("Digite a quantidade comprada:")
+   leia(quanti)
+   escreva("Digite o valor recebido:")
+   leia(dinheiroRec)
+
+   limpatela()
+   
+   troco <- dinheiroRec - (preco*quanti)
+   
+   escreval("Seu troco R$ = ",troco:5:2)
+
+
+
+   
+   
+    Fimalgoritmo
+  
+____________________________________
+
+06-) Algoritmo " Problema "circulo""
+
+//Fazer um programa para ler o valor "r" do raio de um circulo,
+//e depois mostrar o valor da area do circulo com tres casas decimais.
+// A formula da area do circulo e a seguinte: Voce pode usar o valor de
+//fornecido pela biblioteca da sua linguagem de programacao, ou entao,
+//se preferir, use diretamente o valor 3.14159.
+
+Var
+
+raio, area: real
+
+
+Inicio
+
+   escreval("Digite o valor do raio do círculo:")
+   leia(raio)
+
+   limpatela()
+   
+   area <- Pi * (Exp (raio,2))
+   
+   escreval("A área do círculo é = ",area:5:3)
+
+
+
+   
+   
+    Fimalgoritmo
+    
+____________________________________
+
+07-) Algoritmo " Problema "pagamento""
+
+//Fazer um programa para ler o nome de um(a) funcionário(a),
+//o valor que ele(a) recebe por hora, e a quantidade de horas trabalhadas
+//por ele(a). Ao final, mostrar o valor do pagamento do funcionário com
+//uma mensagem explicativa, conforme exemplo.
+
+Var
+
+nome : caractere
+valorH,quantH,pag: real
+
+
+Inicio
+
+   escreval("Digite seu nome:")
+   leia(nome)
+   escreval("Digite o valor da sua hora:")
+   leia(valorH)
+   escreval("Digite a quantidade de horas trabalhadas:")
+   leia(quantH)
+
+   limpatela()
+   
+   pag <- valorH * quantH
+   
+   escreval("O pagamento para ",nome," deve ser ",pag:5:2," reais")
+ 
+   
+    Fimalgoritmo
+    
+____________________________________
+
+08-) Algoritmo " Problema "consumo""
+
+//Fazer um programa para ler a distância total (em km)
+//percorrida por um carro, bem como o total de combustível gasto por
+//este carro ao percorrer tal distância. Seu programa deve mostrar o consumo
+//médio do carro, com três casas decimais.
+
+Var
+
+dist, combus, media : real
+
+Inicio
+
+   escreval("Digite a distância percorrida:")
+   leia(dist)
+   escreval("Digite o valor do combustível gasto:")
+   leia(combus)
+
+
+   limpatela()
+   
+   media <- dist / combus
+   
+   escreval("O consumo médio gasto foi de = ", media:4:3)
+
+
+    Fimalgoritmo
+    
+____________________________________
+
+09-) Algoritmo " Problema "medidas""
+
+//Fazer um programa para ler três medidas A, B e C.
+//Em seguida, calcular e mostrar (imprimir os dados
+//com quatro casas decimais):
+//a) a área do quadrado que tem lado A
+//b) a área do triângulo retângulo que base A e altura B
+//c) a área do trapézio que tem bases A e B, e altura C
+
+Var
+
+a,b,c, quadr,trian,trape : real
+
+Inicio
+
+   escreval("Digite a medida A:")
+   leia(a)
+   escreval("Digite a medida B:")
+   leia(b)
+   escreval("Digite a medida C:")
+   leia(c)
+
+
+
+   limpatela()
+   
+   quadr <- Exp(a,2)
+   trian <- a * b / 2
+   trape <- (a + b) * c / 2
+   
+   escreval("A área do quadrado é = ", quadr:4:4)
+   escreval("A área do triângulo é = ", trian:4:4)
+   escreval("A área do trapézio é = ", trape:4:4)
+
+
+    Fimalgoritmo
+    
+____________________________________
+
+10-) Algoritmo " Problema "duracao""
+
+//Fazer um programa para ler uma duração de tempo em segundos,
+//daí imprimir na tela esta duração no formato horas:minutos:segundos.
+
+Var
+
+a, segun,min,hor : real
+
+Inicio
+
+   escreval("Digite a duração em segundos:")
+   leia(a)
+
+   limpatela()
+
+   hor <- Int(a) \ 3600
+   min <- (a / 60) % 60
+   segun <- Int(a) % 60
+
+   escreval("A duração = " ,hor:2:0, " Horas ", min," minutos " ,segun," segundos ")
+
+
+    Fimalgoritmo
+    
+                        
+            
