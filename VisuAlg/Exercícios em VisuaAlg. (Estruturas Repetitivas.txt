@@ -77,7 +77,7 @@ Fimalgoritmo
 
 _____________________________________________________________________________
 
-03-) Algoritmo "Média_idades"
+03-) Algoritmo "Senha_Fixa"
 
 //Escreva um programa que repita a leitura de uma senha até que
 //ela seja válida. Para cada leitura de senha incorreta informada,
