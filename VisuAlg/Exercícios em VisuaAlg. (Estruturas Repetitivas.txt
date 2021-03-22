@@ -1,0 +1,742 @@
+Exercícios em VisuaAlg. (Estruturas Repetitivas
+
+01-) Algoritmo "Crescente"
+
+//Leia uma quantidade indeterminada de duplas de valores inteiros X e Y.
+//Escreva para cada X e Y uma mensagem que indique se estes valores
+//foram digitados em ordem crescente ou decrescente. O programa deve
+//finalizar quando forem digitados dois valores iguais.
+
+Var
+
+   x,y : inteiro
+
+Inicio
+
+      escreval("Digite dois numeros: ")
+      leia(x)
+      leia(y)
+
+      enquanto x <> y faca
+      
+         se x < y entao
+           escreval("CRESCENTE!")
+             senao
+              escreval("DECRESCENTE!")
+         fimse
+         
+           escreval
+           escreval("Digite outros dois numeros: ")
+           leia(x)
+           leia(y)
+
+      fimenquanto
+
+
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+02-) Algoritmo "Média_idades"
+
+//Faça um programa para ler um número indeterminado de dados,
+//contendo cada um, a idade de um indivíduo. O último dado, que não
+//entrará nos cálculos, contém um valor de idade negativa. Calcular
+//e imprimir a idade média deste grupo de indivíduos. Se for entrado
+//um valor negativo na primeira vez, mostrar a mensagem "IMPOSSIVEL CALCULAR".
+
+Var
+
+   idade, media, indice: real
+
+Inicio
+
+      idade <- 1
+
+      enquanto idade > 0 faca
+
+        escreval("Digite as idades: ")
+        leia(idade)
+
+        se idade > 0 entao
+          indice <- indice + 1
+          media <- idade + media
+        fimse
+
+      fimenquanto
+
+      limpatela()
+      
+      se indice > 0 entao
+      escreval("MEDIA = ", (media/indice):4:2)
+       senao
+            escreva("Impossível calcular")
+      fimse
+
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+03-) Algoritmo "Média_idades"
+
+//Escreva um programa que repita a leitura de uma senha até que
+//ela seja válida. Para cada leitura de senha incorreta informada,
+//escrever a mensagem "Senha Invalida! Tente novamente:". Quando a senha
+//for informada corretamente deve ser impressa a mensagem
+//"Acesso Permitido" e o algoritmo encerrado. Considere que a
+//senha correta é o valor 2002.
+
+Var
+
+   senha, pass: real
+
+Inicio
+
+      senha <- 2002
+      pass <- 1
+      
+        escreva("Digite a senha: ")
+        leia(pass)
+      
+      enquanto senha <> pass faca
+
+        se pass <> senha entao
+        escreva("Senha Inválida! Tente novamente: ")
+        leia(pass)
+        fimse
+        
+      fimenquanto
+
+      limpatela()
+      
+      escreva("Acesso permitido!")
+
+
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+04-) Algoritmo "Quadrante"
+
+//Escreva um programa para ler as coordenadas (X,Y) de uma quantidade
+//indeterminada de pontos no sistema cartesiano. Para cada ponto
+//escrever o quadrante a que ele pertence (Q1, Q2, Q3 ou Q4).
+//O algoritmo será encerrado quando pelo menos uma de duas coordenadas
+//for NULA (nesta situação sem escrever mensagem alguma).
+
+Var
+
+valorX, valorY : real
+
+Inicio
+
+   valorX <- 1
+   valorY <- 1
+
+
+      enquanto (valorX <> 0) e (valorY <> 0) faca
+      
+      escreva("Digite o valor de X: ")
+      leia(valorX)
+
+      escreva("Digite o valor de Y: ")
+      leia(valorY)
+      
+         se (valorX > 0 ) e (valorY > 0) entao
+            limpatela()
+            escreval("QUADRANTE Q1")
+
+         senao
+            se(valorX < 0 ) e (valorY > 0) entao
+             limpatela()
+            escreval("QUADRANTE Q2")
+
+           senao
+            se(valorX < 0 ) e (valorY < 0) entao
+             limpatela()
+            escreval("QUADRANTE Q3")
+
+           senao
+            se(valorX > 0 ) e (valorY < 0) entao
+             limpatela()
+             escreval("QUADRANTE Q4")
+
+            fimse
+           fimse
+          fimse
+         fimse
+         
+      fimenquanto
+
+
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+05-) Algoritmo "Validação de nota"
+
+//Faça um programa que leia as notas referentes às duas avaliações
+//de um aluno. Calcule e imprima a média semestral. Faça com que o
+//algoritmo só aceite notas válidas (uma nota válida deve pertencer ao
+//intervalo [0,10]). Cada nota deve ser validada separadamente.
+
+Var
+
+   cont     : inteiro
+   x,y,soma : real
+
+Inicio
+
+               enquanto cont < 2 faca
+
+                 se (x = 0) e (y = 0) entao
+                 escreva("Digite a primeira nota: ")
+                 leia(x)
+
+                 senao
+                 se (x < 0) ou (x > 10) entao
+                 escreva("Valor inválido! Tente novamente:")
+                 leia(x)
+                 
+                 senao
+                    se (y >= 0) e (y <= 10)  entao
+                    escreva("Digite a segunda nota: ")
+                    leia(y)
+                    
+                  senao
+                     se (y < 0) ou (y > 10) entao
+                    escreva("Valor inválido! Tente novamente:")
+                    leia(y)
+                     fimse
+                    fimse
+                   fimse
+                  fimse
+                  
+
+                  se (x > 0) e (y > 0) e (x <= 10) e (y <= 10) entao
+                     soma<- (x+y) / 2
+                     escreval("A média = ",soma)
+                     x<- 0
+                     y<- 0
+                     cont<- cont + 1
+                fimse
+
+
+               fimenquanto
+              
+              
+              
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+06-) Algoritmo "Problema Combustível"
+
+
+Var
+x, alcool,gasolina,diesel : inteiro
+tipoCombustivel : caractere
+
+
+Inicio
+
+     x<- 0
+
+      enquanto x <> 4 faca
+
+      
+      escreva("Informe um codigo (1, 2, 3) ou 4 para parar:")
+      leia(x)
+      
+      se x = 1 entao
+      alcool <- alcool + 1
+      senao
+         se x = 2 entao
+      gasolina <- gasolina + 1
+      senao
+         se x = 3 entao
+      diesel <- diesel + 1
+       fimse
+      fimse
+     fimse
+
+      fimenquanto
+      
+      escreval("Muito Obrigado !")
+      escreval("Álcool: ", alcool)
+      escreval("Gasolina: ", gasolina)
+      escreval("Diesel: ", diesel)
+
+
+
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+07-) Algoritmo "Pares Consecutivos"
+
+//O programa deve ler um valor inteiro X indefinidas vezes.
+//(O programa irá parar quando o valor de X for igual a 0). Para cada
+//X lido, imprima a soma dos 5 pares consecutivos a partir de X,
+//inclusive o X , se for par. Se o valor de entrada for 4, por exemplo,
+//a saída deve ser 40, que é o resultado da operação: 4+6+8+10+12,
+//enquanto que se o valor de entrada for 11, por exempo, a saída
+//deve ser 80, que é a soma de 12+14+16+18+20.
+
+Var
+
+x, soma0,soma1,soma2,soma3,somaTotal : inteiro
+
+
+Inicio
+
+     x <- 1
+     
+          enquanto x > 0 faca
+
+            escreva ("Digite um numero inteiro: ")
+                leia(x)
+
+               se (x % 2 = 0) e (x <> 0) entao
+                soma0 <- x + 2
+                soma1 <- soma0 + 2
+                soma2 <- soma1 + 2
+                soma3 <- soma2 + 2
+                somaTotal <- x + soma0 + soma1 + soma2 + soma3
+                   escreval("A Soma é: ",somaTotal)
+               senao
+                 se (x % 2 <> 0) e (x <> 0) entao
+                x <- x+1
+                soma0 <- x + 2
+                soma1 <- soma0 + 2
+                soma2 <- soma1 + 2
+                soma3 <- soma2 + 2
+                somaTotal <- x + soma0 + soma1 + soma2 + soma3
+                   escreval("A Soma é: ",somaTotal)
+                 fimse
+                fimse
+          fimenquanto
+
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+08-) Algoritmo "Tabuada"
+
+//Ler um número inteiro N, daí mostrar na tela a tabuada de N para 1 a 10,
+//conforme exemplo.
+
+Var
+//x, indice : inteiro
+num1, i : inteiro
+ s : caractere
+
+Inicio
+
+//indice <- 1
+
+     //Tabuada estrutura de repetição ENQUANTO
+    //  escreval("Deseja qual valor da tabuada ?")
+    //  leia(x)
+
+     // enquanto indice <= 10  faca
+    //  escreval(x," X", indice," =", x*indice)
+    //  indice <- indice + 1
+    //  fimenquanto
+    
+        //Tabuada estrutura de repetição PARA
+
+      num1 <- 0
+      s <- "s"
+
+      enquanto s = "s" faca
+
+      escreva("Qual tabuada deseja ver ? ")
+       leia(num1)
+
+      para i de 1 ate 10 faca
+
+       escreval(num1," x ",i, " = ",num1*i)
+       fimpara
+
+        escreval
+        escreval("Deseja continuar ? (s) para sim ")
+        leia(s)
+        limpatela()
+        
+      fimenquanto
+
+      
+      
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+09-) Algoritmo "Somas Ímpares"
+
+//Leia 2 valores inteiros X e Y (em qualquer ordem).
+// A seguir, calcule e mostre a soma dos números impares entre eles.
+
+Var
+
+x,y,i, cont : inteiro
+
+Inicio
+
+           escreval("Digite dois numeros:?")
+           leia(x)
+           leia(y)
+
+           se x > y entao
+            y<- y +1
+               para i de y ate x faca
+
+                     se (i % 2 <> 0) e ( i < x) entao
+                      cont<- cont + i
+                     fimse
+
+               fimpara
+           
+             escreval("A soma dos ímpares = ", cont)
+             
+           fimse
+
+
+      se x < y entao
+            
+             para i de x ate y faca
+
+               se (i % 2 <> 0) e ( i < y) entao
+                cont<- cont + i
+               fimse
+
+             fimpara
+
+          escreval("A soma dos ímpares = ", cont)
+
+      fimse
+      
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+10-) Algoritmo "Sequência Ímpares"
+
+//Leia um valor inteiro X. Em seguida mostre os ímpares de 1 até X,
+//um valor por linha, inclusive o X, se for o caso.
+
+Var
+
+x,i,soma : inteiro
+
+Inicio
+
+
+      escreva("Digite o valor de X: ")
+      leia(x)
+
+      para i de 1 ate x faca
+
+           se (x % 2 <> 0) entao
+
+              soma <- i*2-1
+               se soma < x entao
+              escreval("Valor de X: ", soma)
+               fimse
+               
+          fimse
+
+
+             se (x % 2 = 0) entao
+               soma <- i*2-1
+                se soma < x entao
+                escreval("Valor de X: ", soma)
+                fimse
+                
+            fimse
+
+       fimpara
+
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+11-) Algoritmo "Dentro Fora"
+
+//Leia um valor inteiro N. Este valor será a quantidade de
+//valores inteiros X que serão lidos em seguida. Mostre quantos destes
+//valores X estão dentro do intervalo [10,20] e quantos estão fora
+// do intervalo, conforme exemplo.
+
+Var
+
+x,x1,i, cont, cont1 : inteiro
+
+Inicio
+
+           escreval("Quantos números você vai digitar?")
+           leia(x)
+
+      para i de 1 ate x faca
+
+        escreva ("Digite um numero:")
+           leia(x1)
+           
+           se (x1 >= 10) e (x1 <= 20) entao
+              cont<- cont + 1
+            senao
+              cont1<- cont1 + 1
+           fimse
+           
+       fimpara
+       
+            limpatela()
+            escreval("NÚMEROS DENTRO = ",cont)
+            escreval("NÚMEROS FORA = ",cont1)
+
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+12-) Algoritmo "Par Ímpar"
+
+//Leia um valor inteiro N. Este valor será a quantidade de
+//números inteiros que serão lidos em seguida.Para cada valor lido,
+//mostre uma mensagem dizendo se este valor lido é PAR ou IMPAR,
+//e também se é POSITIVO ou NEGATIVO. No caso do valor ser igual a zero (0)
+//, seu programa deverá imprimir apenas NULO.
+
+Var
+
+x,x1,i : inteiro
+
+Inicio
+
+           escreval("Quantos números você vai digitar?")
+           leia(x)
+
+      para i de 1 ate x faca
+
+        escreva ("Digite um numero:")
+           leia(x1)
+           
+           se (x1 > 0) e (x1 % 2 = 0) entao
+              escreval("PAR POSITIVO")
+              
+           senao
+            se(x1 < 0) e (x1 % 2 = 0) entao
+               escreval("PAR NEGATIVO")
+               
+            senao
+            se (x1 > 0) e (x1 % 2 <> 0) entao
+              escreval("ÍMPAR POSITIVO")
+              
+            senao
+            se(x1 < 0) e (x1 % 2 <> 0) entao
+               escreval("ÍMPAR NEGATIVO")
+               
+               senao
+               escreval("NULO")
+               
+                fimse
+               fimse
+             fimse
+           fimse
+           
+       fimpara
+
+
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+13-) Algoritmo "Média Ponderada"
+
+//Leia um valor inteiro N, que representa o número de casos de teste que
+//vem a seguir. Cada caso de teste consiste de 3 valores reais, para os
+//quais você deverá calcular e mostrar a média ponderada, sendo
+//que o primeiro valor tem peso 2, o segundo valor tem peso 3 e o
+//terceiro valor tem peso 5. Vale lembrar que a média ponderada é a soma
+//de todos os valores multiplicados pelo seu respectivo peso, dividida
+//pela soma dos pesos.
+
+Var
+
+  n,cont : inteiro
+  x,y,z,soma,ponderada,media : real
+
+Inicio
+
+      ponderada<- 10
+
+                 escreval ("Quantos casos voce vai digitar?")
+                 leia(n)
+
+                 enquanto cont < n faca
+
+                 escreval("Digite três numeros: ")
+                 leia(x)
+                 leia(y)
+                 leia(z)
+                 
+                 soma<- (x*2)+(y*3)+(z*5)
+                 media<- soma / ponderada
+                 escreval("A média = ",media:4:1)
+                 cont<- cont + 1
+                 fimenquanto
+
+
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+14-) Algoritmo "Divisão"
+
+//Escreva um algoritmo que leia dois números e imprima o
+//resultado da divisão do primeiro pelo segundo. Caso não for possível,
+//mostre a mensagem “DIVISAO IMPOSSIVEL”.
+
+Var
+
+ x,numerador,denominador, cont : inteiro
+
+Inicio
+
+   cont <- 0
+
+          escreva ("Quantos casos você vai digitar ? ")
+          leia(x)
+
+          
+          
+          enquanto cont < x faca
+          
+          escreva("Entre com o numerador: ")
+          leia(numerador)
+          escreva("Entre com o denominador: ")
+          leia(denominador)
+          
+          se denominador = 0 entao
+           escreval("DIVISÃO IMPOSSÍVEL")
+          senao
+          escreval("DIVISAO = ", (numerador / denominador):4:2)
+          fimse
+          cont <- cont + 1
+          
+         fimenquanto
+         
+Fimalgoritmo
+
+_____________________________________________________________________________
+
+15-) Algoritmo "Fatorial"
+
+//Fazer um programa para ler um número natural N (valor máximo: 15),
+//e depois calcular e mostrar o fatorial de N.
+
+Var
+
+n,n1,n0,indice : inteiro
+
+Inicio
+
+    escreva("Digite um número:")
+    leia(n)
+    n1<- n
+
+    enquanto indice < n faca
+    indice<- indice +1
+
+    n0<- n-indice
+
+    se n0 > 0 entao
+    n1<- n1 * n0
+    fimse
+
+    fimenquanto
+
+    se (n=0) ou (n=1) entao
+     escreval("FATORIAL = 1")
+    senao
+      escreval("FATORIAL =",n1)
+    fimse
+    
+ Fimalgoritmo
+
+_____________________________________________________________________________
+
+16-) Algoritmo "Experiência"
+
+//Maria acabou de iniciar seu curso de graduação na faculdade de
+//medicina e precisa de sua ajuda para organizar os experimentos de
+//um laboratório o qual ela é responsável. Ela quer saber no final do ano,
+//quantas cobaias foram utilizadas no laboratório e o percentual de cada
+//tipo de cobaia utilizada. Este laboratório em especial utiliza três
+//tipos de cobaias: sapos, ratos e coelhos. Para obter estas informações,
+//ela sabe exatamente o número de experimentos que foram realizados,
+//o tipo de cobaia utilizada e a quantidade de cobaias utilizadas em cada
+//experimento. Faça um programa que leia um valor inteiro N que indica os
+//vários casos de teste que vem a seguir. Cada caso de teste contém um
+//inteiro que representa a quantidade de cobaias utilizadas e uma letra
+//('C', 'R' ou 'S'), indicando o tipo de cobaia (R:Rato S:Sapo C:Coelho).
+//Apresente o total de cobaias utilizadas, o total de cada tipo de
+//cobaia utilizada e o percentual de cada uma em relação ao total de cobaias
+//utilizadas, sendo que o percentual deve ser apresentado com dois dígitos
+// após o ponto.
+
+Var
+
+x1, n, coelho,rato,sapo,cont, quantC, quantR, quantS, totalAni : inteiro
+x, c,r,s : caractere
+   
+Inicio
+
+               escreva("Quantos casos de teste serão digitados? ")
+               leia(x1)
+
+
+               enquanto cont < x1 faca
+               cont<- cont + 1
+               
+               escreva("Quantidade de cobaias: ")
+               leia(n)
+               escreva("Tipo de cobaia ? ")
+               leia(x)
+
+
+
+               se (x = "c") ou (x = "C") entao
+               quantC <- quantC + n
+               coelho<- coelho + 1
+                senao
+               se (x = "r") ou (x = "R") entao
+               quantR <- quantR + n
+               rato<- rato + 1
+                senao
+               se (x = "s") ou (x = "S") entao
+               quantS <- quantS + n
+               sapo<- sapo + 1
+                 fimse
+                fimse
+               fimse
+               
+               
+               fimenquanto
+               
+
+            totalAni <- quantC + quantR + quantS
+            limpatela()
+            escreval ("RELATORIO FINAL: ")
+            escreval ("TOTAL: ",(totalAni)," cobaias")
+            escreval ("Total de coelhos: ", quantC)
+            escreval ("Total de ratos: ", quantR)
+            escreval ("Total de sapos: ", quantS)
+            escreval ("Percentual de coelhos: ",(quantC*100 / totalAni):4:2)
+            escreval ("Percentual de ratos: ",(quantR*100 / totalAni):4:2)
+            escreval ("Percentual de sapos: ",(quantS*100 / totalAni):4:2)
+            
+
+Fimalgoritmo
+
+_____________________________________________________________________________
+
