@@ -1,0 +1,594 @@
+Exercícios em VisuAlg. (Vetores).
+
+01-) Algoritmo "Negativos"
+
+//Problema "negativos"
+//Faça um programa que leia um número inteiro positivo N (máximo = 10) e depois N números inteiros
+//e armazene-os em um vetor. Em seguida, mostrar na tela todos os números negativos lidos.
+
+Var
+
+   n,i : inteiro
+   vet : vetor [0..9] de real
+
+Inicio
+
+            escreval("Quantos números você vai digitar ?")
+            leia(n)
+
+          para i de 0 ate n-1 faca
+
+               escreva("Digite um número: ")
+                leia(vet[i])
+          fimpara
+          
+          escreval("Números negativos:")
+          para i de 0 ate n faca
+          se vet[i]<0 entao
+           escreval(vet[i])
+          fimse
+          fimpara
+
+Fimalgoritmo
+    
+____________________________________
+
+02-) Algoritmo "Soma Vetor"
+
+//Faça um programa que leia N números reais e armazene-os em um vetor. Em seguida:
+//- Imprimir todos os elementos do vetor
+//- Mostrar na tela a soma e a média dos elementos do vetor
+Var
+
+   n,soma,media : real
+   i : inteiro
+   vet : vetor [0..9] de real
+
+Inicio
+
+            escreval("Quantos números você vai digitar ?")
+            leia(n)
+
+          para i de 0 ate int(n-1) faca
+
+               escreva("Digite um número: ")
+                leia(vet[i])
+          fimpara
+
+          escreva("Valores = ")
+          para i de 0 ate int(n-1) faca
+          se vet[i]>0 entao
+          soma<- soma + vet[i]
+          media<- soma / n
+          fimse
+          escreva(vet[i]:5:1)
+          fimpara
+          
+          escreval
+          escreval("Soma = ",soma:4:2)
+          escreval("Média = ",media:4:2)
+
+Fimalgoritmo
+    
+____________________________________
+
+03-) Algoritmo "Alturas"
+
+//Fazer um programa para ler nome, idade e altura de N pessoas, conforme exemplo. Depois, mostrar na
+//tela a altura média das pessoas, e mostrar também a porcentagem de pessoas com menos de 16 anos,
+//bem como os nomes dessas pessoas caso houver.
+
+Var
+
+   n,soma,soma1,media,media1: real
+   a,indice : inteiro
+   nomes  : caractere
+
+   vet : vetor [0..9] de caractere
+   vet2 : vetor [0..9] de inteiro
+   vet3 : vetor [0..9] de real
+
+Inicio
+
+            escreval("Quantos números você vai digitar ?")
+            leia(n)
+  indice<-0
+  
+          para a de 0 ate int(n-1) faca
+
+
+               indice<- indice + 1
+               escreval("Dados da", indice ," pessoa:")
+               escreva("Nome: ")
+               leia(vet[a])
+               
+               escreva("Idade: ")
+               leia(vet2[a])
+               
+              escreva("Altura: ")
+               leia(vet3[a])
+
+          fimpara
+
+          para a de 0 ate int(n-1) faca
+          
+          se vet3[a]>0 entao
+          soma<- soma + vet3[a]
+          media<- soma / n
+          fimse
+          
+          se vet2[a]<16 entao
+          soma1<- soma1 + 1
+          media1<- (soma1 * 100) / n
+          nomes<- nomes + vet[a] + " "
+          fimse
+          fimpara
+          
+         limpatela()
+         escreval
+         escreval("Altura média: ",media:4:2)
+         escreval("Pessoas com menos de 16 anos: ",media1:4:1,"%")
+         escreval("Nome das pessoas com menos de 16 anos: ",nomes)
+
+Fimalgoritmo
+    
+____________________________________
+
+04-) Algoritmo "Números Pares"
+
+//Problema "numeros_pares"
+//Faça um programa que leia N números inteiros e armazene-os em um vetor. Em seguida, mostre na
+//tela todos os números pares, e também a quantidade de números pares.
+
+Var
+
+
+   a,n,soma,pares: inteiro
+
+
+   vet : vetor [0..9] de inteiro
+
+Inicio
+
+            escreval("Quantos números você vai digitar ?")
+            leia(n)
+
+
+          para a de 0 ate int(n-1) faca
+
+               escreval("Digite um numero:")
+               leia(vet[a])
+               
+          fimpara
+          
+          limpatela()
+          escreval("NUMEROS PARES:")
+          para a de 0 ate int(n-1) faca
+          
+           se vet[a]%2=0 entao
+            soma<- soma + 1
+            escreva(vet[a])
+           fimse
+
+          fimpara
+
+         escreval
+         escreval("QUANTIDADE DE PARES =",soma)
+
+
+Fimalgoritmo
+
+____________________________________
+
+05-) Algoritmo "Maior_Posição"
+
+//Faça um programa que leia N números reais e armazene-os em um vetor. Em seguida, mostrar na tela
+//o maior número do vetor (supor não haver empates). Mostrar também a posição do maior elemento,
+//considerando a primeira posição como 0 (zero).
+
+Var
+
+
+   a,n,maior,posicao: inteiro
+
+   vet : vetor [0..9] de inteiro
+
+Inicio
+
+            escreva("Quantos números você vai digitar ? ")
+            leia(n)
+
+          para a de 0 ate int(n-1) faca
+
+               escreva("Digite um numero: ")
+               leia(vet[a])
+               
+               se vet[a] > maior entao
+               maior<- vet[a]
+               posicao<- a
+                fimse
+                
+          fimpara
+          
+        limpatela()
+        escreval("MAIOR VALOR =",maior:5:1)
+        escreval("POSIÇÃO DO MAIOR VALOR =",posicao)
+
+
+Fimalgoritmo
+  
+____________________________________
+
+06-) Algoritmo "Soma_Vetores"
+
+//Faça um programa para ler dois vetores A e B, contendo N elementos cada. Em seguida, gere um
+//terceiro vetor C onde cada elemento de C é a soma dos elementos correspondentes de A e B. Imprima
+//o vetor C gerado.
+
+Var
+
+
+   a,n: inteiro
+
+   vet0 : vetor [0..9] de inteiro
+   vet1 : vetor [0..9] de inteiro
+   vet2 : vetor [0..9] de inteiro
+
+Inicio
+
+            escreva("Quantos valores vai ter cada vetor? ")
+            leia(n)
+
+            escreval("Digite os valores do vetor A: ")
+            para a de 0 ate (n-1) faca
+
+            leia(vet0[a])
+            fimpara
+
+            escreval("Digite os valores do vetor B: ")
+            para a de 0 ate (n-1) faca
+
+            leia(vet1[a])
+            fimpara
+            
+            escreval("VETOR RESULTANTE: ")
+            para a de 0 ate (n-1) faca
+            vet2[a]<- vet0[a]+vet1[a]
+            escreval(vet2[a])
+            fimpara
+            
+Fimalgoritmo
+
+    
+____________________________________
+
+07-) Algoritmo "Abaixo_da_Média"
+
+//Fazer um programa para ler um número inteiro N e depois um vetor de N números reais. Em seguida,
+//mostrar na tela a média aritmética de todos elementos com três casas decimais. Depois mostrar todos
+//os elementos do vetor que estejam abaixo da média, com uma casa decimal cada.
+
+Var
+
+   a,n: inteiro
+   media,soma,mostre : real
+   vet : vetor [0..9] de real
+                                         //  10   15.5  13.2  9.8
+Inicio
+
+            escreva("Quantos elementos vai ter o vetor? ")
+            leia(n)
+
+            escreval("Digite um numero:")
+            para a de 0 ate (n-1) faca
+
+            leia(vet[a])
+            soma<- soma+vet[a]
+            media<- (soma/n)
+
+            fimpara
+            
+            limpatela()
+            escreval("MÉDIA DO VETOR = ", media:5:3)
+            escreval ("ELEMENTOS ABAIXO DA MÉDIA: ")
+            para a de 0 ate (n-1) faca
+
+            se vet[a] < media entao
+            mostre<- vet[a]
+            escreval (mostre)
+            fimse
+            
+            fimpara
+
+
+Fimalgoritmo
+    
+____________________________________
+
+08-) Algoritmo "Média_Pares"
+
+//Problema "media_pares "
+//Fazer um programa para ler um vetor de N números inteiros. Em seguida, mostrar na tela a média
+//aritmética somente dos números pares lidos, com uma casa decimal. Se nenhum número par for
+//digitado, mostrar a mensagem "NENHUM NUMERO PAR"
+
+Var
+
+
+   a,n: inteiro
+   media,soma,cont : real
+   vet : vetor [0..9] de inteiro
+
+Inicio
+
+            escreva("Quantos elementos vai ter o vetor? ")
+            leia(n)
+
+            escreval("Digite um numero:")
+            para a de 0 ate (n-1) faca
+
+            leia(vet[a])
+            se vet[a]%2=0 entao
+            cont<- cont + 1
+            soma<- soma+vet[a]
+            media<- (soma/cont)
+            fimse
+            fimpara
+
+            se cont > 0 entao
+            escreval("MEDIA DO VETOR = ", media:5:1)
+            senao
+            escreval("NENHUM NUMERO PAR.")
+            fimse
+
+Fimalgoritmo
+
+    
+____________________________________
+
+09-) Algoritmo "Mais_Velho"
+
+//Fazer um programa para ler um conjunto de nomes de pessoas e suas respectivas idades. Os nomes
+//devem ser armazenados em um vetor, e as idades em um outro vetor. Depois, mostrar na tela o nome
+//da pessoa mais velha.
+
+Var
+
+   n,numeroMaior: real
+   a,indice : inteiro
+   nomes  : caractere
+
+   vet : vetor [0..9] de caractere
+   vet1 : vetor [0..9] de inteiro
+
+
+Inicio
+
+ indice<-0
+ 
+            escreval("Quantos números você vai digitar ?")
+            leia(n)
+
+  
+          para a de 0 ate int(n-1) faca
+
+               indice<- indice + 1
+               escreval("Dados da", indice ," pessoa:")
+               escreva("Nome: ")
+               leia(vet[a])
+               
+               escreva("Idade: ")
+               leia(vet1[a])
+
+          fimpara
+
+          para a de 0 ate int(n-1) faca
+
+          se vet1[a] > numeroMaior entao
+          numeroMaior<- vet1[a]
+          nomes<- vet[a]
+          fimse
+          fimpara
+          
+         limpatela()
+         escreval
+         escreval("PESSOA MAIS VELHA: ",nomes)
+
+
+Fimalgoritmo
+    
+____________________________________
+
+10-) Algoritmo "Aprovados"
+
+//Fazer um programa para ler um conjunto de N nomes de alunos, bem como as notas que eles tiraram
+//no 1º e 2º semestres. Cada uma dessas informações deve ser armazenada em um vetor. Depois, imprimir
+//os nomes dos alunos aprovados, considerando aprovados aqueles cuja média das notas seja maior ou
+//igual a 6.0 (seis).
+
+Var
+
+   n,media,conta  : real
+   a,indice : inteiro
+   aprovados: caractere
+
+   vet : vetor [0..9] de caractere
+   vet2 : vetor [0..9] de real
+   vet3 : vetor [0..9] de real
+
+Inicio
+
+            escreval("Quantos números você vai digitar ?")
+            leia(n)
+  indice<-0
+  
+          para a de 0 ate int(n-1) faca
+
+      indice<- indice + 1
+      escreval("Digite nome, primeira e segunda nota do", indice ," aluno:")
+      leia(vet[a])
+      leia(vet2[a])
+      leia(vet3[a])
+      
+          fimpara
+
+          para a de 0 ate int(n-1) faca
+
+            conta]<- vet2[a]+vet3[a]
+            media<- conta / 2
+            
+            se media >= 6 entao
+            aprovados<- aprovados + vet[a] + ". "
+            fimse
+
+          fimpara
+          
+          
+         limpatela()
+         escreval
+         escreval("Alunos aprovados: ",aprovados)
+
+Fimalgoritmo
+
+____________________________________
+
+11-) Algoritmo "Dados_Pessoa"
+
+//Tem-se um conjunto de dados contendo a altura e o gênero (M, F) de N pessoas. Fazer um programa
+//que calcule e escreva a maior e a menor altura do grupo, a média de altura das mulheres, e o número
+//de homens.
+
+Var
+
+   n,maiorAltura,menorAltura,soma,media,cont,cont1,aux: real
+   a,indice : inteiro
+   f,m : caractere
+
+
+   vet : vetor [0..9] de real
+   vet2 : vetor [0..9] de caractere
+
+Inicio
+
+            escreval("Quantos números você vai digitar ?")
+            leia(n)
+
+  indice<-0
+  aux<-2
+
+          para a de 0 ate int(n-1) faca
+
+               indice<- indice + 1
+               escreval("Altura da",indice," pessoa:")
+               leia(vet[a])
+               
+               se vet[a] > maiorAltura entao
+               maiorAltura<- vet[a]
+               fimse
+
+               se vet[a] < aux entao
+               menorAltura<- vet[a]
+               aux <- menorAltura
+               fimse
+
+               escreval("Gênero da",indice," pessoa:")
+               leia(vet2[a])
+   
+               se (vet2[a] = "f") ou (vet2[a] = "F") entao
+               cont<- cont + 1
+               soma<- soma + vet[a]
+               media<- soma/cont
+               fimse
+               
+               se (vet2[a] = "m") ou (vet2[a] = "M")  entao
+               cont1<- cont1 + 1
+               fimse
+
+          fimpara
+
+         limpatela()
+         escreval
+         escreval("Menor Altura: ",menorAltura:4:2)
+         escreval("Maior Altura: ",maiorAltura:4:2)
+         escreval("Média das alturas das mulheres: ",media:4:2)
+         escreval("Número de homens = ",cont1:2:0)
+
+Fimalgoritmo
+
+____________________________________
+
+12-) Algoritmo "Comerciante"
+
+//Um comerciante deseja fazer o levantamento do lucro das mercadorias que ele comercializa. Para isto,
+//mandou digitar um conjunto de N mercadorias, cada uma contendo nome, preco de compra e preco de
+//venda das mesmas. Fazer um programa que leia tais dados e determine e escreva quantas mercadorias
+//proporcionaram:
+//h lucro < 10%
+//h 10% . lucro . 20%
+//h lucro > 20%
+//Determine e escreva tambem o valor total de compra e de venda de todas as mercadorias, assim como
+//o lucro total.
+
+Var
+
+   n,lucro,lucro10,lucro15,lucro20,compra,venda: real
+   a,indice : inteiro
+   nomes  : caractere
+
+   vet : vetor [0..9] de caractere
+   vet1 : vetor [0..9] de real
+   vet2 : vetor [0..9] de real
+
+Inicio
+
+            escreval("Serão digitados dados de quantos produtos?")
+            leia(n)
+  indice<-0
+  
+          para a de 0 ate int(n-1) faca
+
+               indice<- indice + 1
+               escreval("Produto", indice ,":")
+               escreva("Nome: ")
+               leia(vet[a])
+               
+               escreva("Preço de compra: ")
+               leia(vet1[a])
+               compra<- compra + vet1[a]
+               
+               escreva("Preço de venda: ")
+               leia(vet2[a])
+               venda<- venda + vet2[a]
+               
+               lucro<- (vet2[a] - vet1[a]) * 100 / vet1[a]
+               
+               se lucro < 10 entao
+               lucro10<- lucro10 + 1
+               
+               senao
+                  se lucro < 20 entao
+               lucro15<- lucro15 + 1
+               senao
+               lucro20<- lucro20 + 1
+                fimse
+               fimse
+               
+          fimpara
+                limpatela()
+                escreval("RELATÓRIO:")
+                escreval("Lucro abaixo de 10%: ",lucro10)
+                escreval("Lucro entre 10% e 20%: ",lucro15)
+                escreval("Lucro acima de 20%: ",lucro20)
+                escreval("Valor total de compra: ",compra:4:2)
+                escreval("Valor total de venda: ",venda:4:2)
+                escreval("Lucro total: ",venda-compra:4:2)
+                
+Fimalgoritmo
+
+
+
+
+
+
+                        
+            
