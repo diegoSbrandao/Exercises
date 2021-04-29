@@ -323,7 +323,7 @@ Fimalgoritmo
     
 ____________________________________
 
-09-) Algoritmo "Temperatura"
+09-) Algoritmo "Lanchonete"
 
 //Uma lanchonete possui vários produtos. Cada produto possui um código
 //e um preço. Você deve fazer um programa para ler o código e a
