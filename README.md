@@ -12,5 +12,5 @@ Exercícios em linguagem Java: <strong>15</strong>
 </br>
 </br>
 <img align="left" alt="Java" width="80px" src="https://guiatech.net/wp-content/uploads/2019/04/algoritmos.jpg" />
-Exercícios em Visualg(Portugol): <strong>15</strong> 
+Exercícios em Visualg(Portugol): <strong>58</strong> 
 
