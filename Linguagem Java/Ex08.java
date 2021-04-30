@@ -1,5 +1,5 @@
 /*
- * Exercício 01
+ * Exercício 08
 
 Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não.
 
@@ -18,7 +18,7 @@ Entrada: Saída:
 
 import java.util.Scanner;
 
-public class Ex01 {
+public class ex08 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

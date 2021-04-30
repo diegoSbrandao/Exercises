@@ -28,7 +28,7 @@ RETANGULO: 132.080
  */
 
 import java.util.Scanner;
-public class Ex06 {
+public class ex06 {
 
 	public static void main(String[] args) {
 		

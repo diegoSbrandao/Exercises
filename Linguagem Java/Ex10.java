@@ -1,6 +1,8 @@
 import java.util.Locale;
 import java.util.Scanner;
-/* Problema "idades"
+/* 
+Exercício 10
+Problema "idades"
  * 
 Fazer um programa para ler o nome e idade de duas pessoas. Ao final mostrar uma mensagem com os
 nomes e a idade média entre essas pessoas, com uma casa decimal, conforme exemplo.
@@ -16,7 +18,7 @@ A idade média de Maria Silva e Joao Melo é de 19.5 anos
 
 */
 
-public class idades {
+public class ex10 {
 
 	public static void main(String[] args) {
 

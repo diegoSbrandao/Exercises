@@ -32,7 +32,7 @@ SALARY = U$ 2254.75
 
 import java.util.Scanner;
 
-public class Ex04 {
+public class ex04 {
 
 	public static void main(String[] args) {
 		

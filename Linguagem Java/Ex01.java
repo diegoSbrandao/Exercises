@@ -24,7 +24,7 @@ Entrada: Saída:
 SOMA = 0
  */
 import java.util.Scanner;
-public class Ex01 {
+public class ex01 {
 
 	public static void main(String[] args) {
 		

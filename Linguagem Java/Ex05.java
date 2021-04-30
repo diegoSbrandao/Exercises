@@ -23,7 +23,7 @@ VALOR A PAGAR: R$ 30.20
  */
 
 import java.util.Scanner;
-public class Ex05 {
+public class ex05 {
 
 	public static void main(String[] args) {
 	

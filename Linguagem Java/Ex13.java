@@ -1,7 +1,9 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-/* Problema "soma_impares" (adaptado de URI 1071)
+/* 
+Exercício 13
+Problema "soma_impares" (adaptado de URI 1071)
  * 
 Leia 2 valores inteiros X e Y (em qualquer ordem). A seguir, calcule e mostre a soma dos números
 impares entre eles.
@@ -26,7 +28,7 @@ SOMA DOS IMPARES = 5
 
 */
 
-public class soma_impares {
+public class ex13 {
 
 	public static void main(String[] args) {
 

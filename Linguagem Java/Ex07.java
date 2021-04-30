@@ -1,6 +1,6 @@
 /*
- * Exercício 02
-Correção: https://github.com/acenelio/nivelamento-java/blob/master/src/cond02.java
+ * Exercício 07
+
 Fazer um programa para ler um número inteiro e dizer se este número é par ou ímpar.
 
 Exemplos:
@@ -16,7 +16,7 @@ Entrada: Saída:
  */
 
 import java.util.Scanner;
-public class Ex02 {
+public class ex07 {
 
 	public static void main(String[] args) {
 		

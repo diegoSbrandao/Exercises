@@ -1,7 +1,9 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-/* Problema "soma_vetor"
+/*
+Exercício 14
+ Problema "soma_vetor"
  * 
 Faça um programa que leia N números reais e armazene-os em um vetor. Em seguida:
 - Imprimir todos os elementos do vetor
@@ -19,7 +21,7 @@ MEDIA = 9.00
 
 */
 
-public class soma_vetor {
+public class ex14 {
 
 	public static void main(String[] args) {
 

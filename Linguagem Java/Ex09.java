@@ -1,7 +1,9 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-/* Problema "crescente" (adaptado de URI 1113)
+/* 
+Exercício 09
+Problema "crescente" (adaptado de URI 1113)
  
 Leia uma quantidade indeterminada de duplas de valores inteiros X e Y. Escreva para cada X e Y uma
 mensagem que indique se estes valores foram digitados em ordem crescente ou decrescente. O
@@ -22,7 +24,7 @@ Digite outros dois numeros:
 
 */
 
-public class crescente {
+public class ex09 {
 
 	public static void main(String[] args) {
 
