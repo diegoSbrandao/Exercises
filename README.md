@@ -5,8 +5,10 @@ Exercício_Lógica_Programação
 Exercício em linguagem C: <em>15</em> 
 </br>
 </br>
+</br>
 <img align="left" alt="Java" width="40px" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_wordmark_logo_icon_146459.png" />
 Exercícios em linguagem Java:<em>16</em>
+</br>
 </br>
 </br>
 <img align="left" alt="Java" width="80px" src="https://guiatech.net/wp-content/uploads/2019/04/algoritmos.jpg" />
