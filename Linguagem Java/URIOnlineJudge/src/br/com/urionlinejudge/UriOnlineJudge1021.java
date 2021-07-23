@@ -1,4 +1,5 @@
 package br.com.urionlinejudge;
+import java.util.Locale;
 import java.util.Scanner;
 
 /*
@@ -38,9 +39,12 @@ MOEDAS:
  */
 public class UriOnlineJudge1021 {
     public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
         double N = sc.nextDouble();
+        double RES = N;
+
         int X100 = 0;
         int X50 = 0;
         int X20 = 0;
@@ -48,78 +52,86 @@ public class UriOnlineJudge1021 {
         int X5 = 0;
         int X2 = 0;
 
-        int RES = (int) N;
+        int X1 = 0;
+        int X05 = 0;
+        int X025 = 0;
+        int X010 = 0;
+        int X005 = 0;
+        int X001 = 0;
 
-        double X1 = 0;
-        double X05 = 0;
-        double X025 = 0;
-        double X010 = 0;
-        double X005 = 0;
-        double X001 = 0;
-        
 
         while (RES != 0) {
-            X100 = RES / 100;
-            RES = RES - (X100 * 100);
+            X100 = (int) (RES / 100);
+            RES = RES % 100;
 
-            X50 = RES / 50;
-            RES = RES - (X50 * 50);
+            X50 = (int) (RES / 50);
+            RES = RES % 50;
 
-            X20 = RES / 20;
-            RES = RES - (X20 * 20);
+            X20 = (int) (RES / 20);
+            RES = RES % 20;
 
-            X10 = RES / 10;
-            RES = RES - (X10 * 10);
+            X10 = (int) (RES / 10);
+            RES = RES % 10;
 
-            X5 = RES / 5;
-            RES = RES - (X5 * 5);
+            X5 = (int) (RES / 5);
+            RES = RES % 5;
 
-            X2 = RES / 2;
-            RES = RES - (X2 * 2);
+            X2 = (int) (RES / 2);
+            RES = RES % 2;
             break;
         }
 
-        double moeda = RES;
-        System.out.printf("%.2f",moeda);
+        double moeda = 0;
+        moeda = N - (N - RES);
+        moeda = moeda * 100.00;
 
-        while (moeda != 0) {
+        while (moeda != 0 || moeda < 0) {
 
-            X1 = moeda / 1.0;
-            moeda = moeda - (X1 * 1.0);
-            
-            X05 = moeda / 0.5;
-            moeda = moeda - (X05 * 0.5);
+            X1 = (int) (moeda / 100);
+            moeda = moeda % 100;
 
-            X025 = moeda / 0.25;
-            moeda = moeda - (X20 * 0.25);
+            X05 = (int) (moeda / 50.00);
+            moeda = moeda % 50.00;
 
-            X010 = moeda / 0.1;
-            moeda = moeda - (X010 * 0.10);
+            X025 = (int) (moeda / 25.00);
+            moeda = moeda % 25.00;
 
-            X005 = moeda / 0.05;
-            moeda = moeda - (X005 * 0.05);
+            X010 = (int) (moeda / 10.00);
+            moeda = moeda % 10.00;
 
-            X001 = moeda / 0.01;
-            moeda = moeda - (X001 * 0.01);
+            X005 = (int) (moeda / 5.00);
+            moeda = moeda % 5.00;
+
+            X001 = (int) (moeda / 1.00);
+            moeda = moeda % 1.00;
+            break;
         }
 
+        System.out.println("NOTAS:");
+        System.out.println(X100 + " nota(s) de R$ 100.00");
+        System.out.println(X50 + " nota(s) de R$ 50.00");
+        System.out.println(X20 + " nota(s) de R$ 20.00");
+        System.out.println(X10 + " nota(s) de R$ 10.00");
+        System.out.println(X5 + " nota(s) de R$ 5.00");
+        System.out.println(X2 + " nota(s) de R$ 2.00");
 
-        System.out.println("NOTAS");
-        System.out.println(X100 + " nota(s) de R$ 100,00" );
-        System.out.println(X50 + " nota(s) de R$ 50,00" );
-        System.out.println(X20 + " nota(s) de R$ 20,00" );
-        System.out.println(X10 + " nota(s) de R$ 10,00" );
-        System.out.println(X5 + " nota(s) de R$ 5,00" );
-        System.out.println(X2 + " nota(s) de R$ 2,00" );
-
-        System.out.println("MOEDAS");
-        System.out.println(X1 + " moeda(s) de R$ 1.00" );
-        System.out.println(X05 + " moeda(s) de R$ 0.50" );
-        System.out.println(X025 + " moeda(s) de R$ 0.25" );
-        System.out.println(X010 + " moeda(s) de R$ 0.10" );
-        System.out.println(X005 + " moeda(s) de R$ 0.05" );
-        System.out.println(X001 + " moeda(s) de R$ 0.01" );
-
+        System.out.println("MOEDAS:");
+        System.out.println(X1 + " moeda(s) de R$ 1.00");
+        System.out.println(X05 + " moeda(s) de R$ 0.50");
+        System.out.println(X025 + " moeda(s) de R$ 0.25");
+        System.out.println(X010 + " moeda(s) de R$ 0.10");
+        System.out.println(X005 + " moeda(s) de R$ 0.05");
+        System.out.println(X001 + " moeda(s) de R$ 0.01");
         sc.close();
     }
 }
+
+
+
+
+
+
+
+
+
+

@@ -45,25 +45,25 @@ public class UriOnlineJudge1018 {
 
         while (RES != 0) {
             X100 = RES / 100;
-            RES = RES - (X100 * 100);
+            RES -= (X100 * 100);
 
             X50 = RES / 50;
-            RES = RES - (X50 * 50);
+            RES -= (X50 * 50);
 
             X20 = RES / 20;
-            RES = RES - (X20 * 20);
+            RES -= (X20 * 20);
 
             X10 = RES / 10;
-            RES = RES - (X10 * 10);
+            RES -= (X10 * 10);
 
             X5 = RES / 5;
-            RES = RES - (X5 * 5);
+            RES -= (X5 * 5);
 
             X2 = RES / 2;
-            RES = RES - (X2 * 2);
+            RES -= (X2 * 2);
 
             X1 = RES / 1;
-            RES = RES - (X1 * 1);
+            RES -= (X1 * 1);
         }
 
         System.out.println(N);
