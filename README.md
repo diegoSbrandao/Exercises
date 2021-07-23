@@ -7,7 +7,7 @@ Exercício em linguagem C:  <a href= "https://github.com/DSB88/Exercises/tree/ma
 </br>
 </br>
 <img align="left" alt="Java" width="40px" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_wordmark_logo_icon_146459.png" />
-Exercícios em linguagem Java:<a href= "https://github.com/DSB88/Exercises/tree/main/Linguagem%20Java">  <strong>38</strong>  </a>
+Exercícios em linguagem Java:<a href= "https://github.com/DSB88/Exercises/tree/main/Linguagem%20Java">  <strong>41</strong>  </a>
 </br>
 </br>
 </br>
